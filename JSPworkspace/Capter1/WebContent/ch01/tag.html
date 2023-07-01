@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSP 공부하기</title>
+
+    <!-- Bootstrap -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/custom2.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body>
+<div class="container">
+	<header>
+		<h2>Bootstrap Tag List</h2>
+	</header>
+
+	<div class="form-group">
+		<form role="form">
+			<label for="text">text</label>
+			<input type="text" class="form-control" name="num1" placeholder="입력하세요">
+			
+			<label for="tel">tel</label>
+			<input type="tel" class="form-control" name="num1" placeholder="입력하세요">		
+			
+			<label for="url">url</label>
+			<input type="url" class="form-control" name="num1" placeholder="입력하세요">	
+			
+			<label for="email">email</label>
+			<input type="email" class="form-control" name="num1" placeholder="입력하세요">	
+			
+			<label for="password">password</label>
+			<input type="password" class="form-control" name="num1" placeholder="입력하세요">	
+			
+			<div class="radio">
+				<label>
+					<input type="radio" name="gender" value="1" checked> 남자
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="gender" value="2"> 여자
+				</label>
+			</div>
+			
+			<label>
+				<input type="radio" name="protocol" value="tcp"> TCP
+			</label>
+			<label>
+				<input type="radio" name="protocol" value="udp" checked> UDP
+			</label>
+			
+			<select class="form-control">
+				<option value='1'>서울</option>
+				<option value='2' selected>경기</option>
+				<option value='3'>충청</option>
+			</select>
+			
+			<!-- Best -->
+			<textarea class="form-control" rows=10>textarea</textarea>
+				
+			<button>버튼이름</button>
+			
+			<button class="btn">btn</button>
+			<button class="btn-default">btn-default</button>		
+			<button class="btn-primary">btn-primary</button>
+			<button class="btn btn-default">btn btn-default</button>
+			<button class="btn btn-default btn-primary">btn btn-default btn-primary</button>
+			
+			<button class="btn btn-success">btn btn-success</button>
+			<button class="btn btn-info">btn btn-info</button>
+			<button class="btn btn-warning">btn btn-warning</button>
+			<button class="btn btn-danger">btn btn-danger</button>
+			<button class="btn btn-link">btn btn-link</button>
+			
+			<input type="button" class="btn btn-danger" value="Danger">
+			<br><br>
+			
+			<div class="btn-group">
+				<button type="button" class="btn btn-primary">버튼1</button>
+				<button type="button" class="btn btn-primary">버튼2</button>
+				<button type="button" class="btn btn-primary">버튼3</button>
+			</div>
+			<br><br>
+			
+			<div class="btn-group-vertical">
+				<button type="button" class="btn btn-primary">버튼1</button>
+				<button type="button" class="btn btn-primary">버튼2</button>
+				<button type="button" class="btn btn-primary">버튼3</button>
+			</div>
+			<br><br>
+			
+			글리피콘(Glyphicon) - 도형문자<br>
+			<p>envelope<span class="glyphicon glyphicon-envelope"></span></p>
+			<p>search<span class="glyphicon glyphicon-search"></span></p>
+			<p>
+				<button type="button" class="btn btn-default">
+					<span class="glyphicon glyphicon-search"></span>Search
+				</button>
+			</p>
+			
+			<p>
+				<a href="#">새 글보기<span class="badge">12</span></a>
+			</p>		
+					
+			<button type="submit" class="btn btn-default btn-primary">더하기</button>
+		</form>
+	</div>
+</div>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

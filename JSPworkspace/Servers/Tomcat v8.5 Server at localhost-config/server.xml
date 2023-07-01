@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server port="8005" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
+  <Listener SSLEngine="on" className="org.apache.catalina.core.AprLifecycleListener"/>
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener"/>
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"/>
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener"/>
+
+  <GlobalNamingResources>
+    <!-- Editable user database that can also be used by UserDatabaseRealm to authenticate users -->
+    <Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
+
+    <!-- Define the JDBC DataSource -->
+   	<Resource auth="Container" description="User database that can be updated and saved" factory="org.apache.catalina.users.MemoryUserDatabaseFactory" name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase"/>
+	<Resource name="jdbc/Capter1" auth="Container"
+           type="javax.sql.DataSource"
+           driverClassName="org.mariadb.jdbc.Driver"
+           url="jdbc:mariadb://database.cjovch9zyo1z.ap-northeast-2.rds.amazonaws.com:3306/ICBM"
+           username="root"
+           password="gtah1864"
+           maxTotal="100"  
+           maxIdle="20"    
+           maxWaitMillis="10000"
+ 	/>
+    
+  </GlobalNamingResources>
+
+  <Service name="Catalina">
+    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Engine defaultHost="localhost" name="Catalina">
+      <Host appBase="webapps" autoDeploy="true" name="localhost" unpackWARs="true">
+        <Context docBase="Capter1" path="/Capter1" reloadable="true" source="org.eclipse.jst.jee.server:Capter1"/>
+        <Context docBase="Capter2" path="/Capter2" reloadable="true" source="org.eclipse.jst.jee.server:Capter2"/>
+      </Host>
+    </Engine>
+  </Service>
+</Server>

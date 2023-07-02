@@ -6,4 +6,4 @@ JSP를 활용한 게시판 만들기
 - JSTL
 - Mariadb
 - Window
-
+- JDK 11

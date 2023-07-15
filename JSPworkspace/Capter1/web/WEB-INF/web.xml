@@ -5,7 +5,7 @@
          version="4.0">
 
     <resource-ref>
-        <res-ref-name>jdbc/itbank2_pool</res-ref-name>
+        <res-ref-name>jdbc/Capter1</res-ref-name>
         <res-auth>Container</res-auth>
     </resource-ref>
     <!-- 게시판용 -->

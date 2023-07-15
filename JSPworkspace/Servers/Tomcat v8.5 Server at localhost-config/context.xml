@@ -27,6 +27,7 @@
     <!--
     <Manager pathname="" />
     -->
+    
     <ResourceLink global="jdbc/Capter1" name="jdbc/Capter1" type="javax.sql.DataSource"/>
 	
    
